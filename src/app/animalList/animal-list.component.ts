@@ -19,7 +19,7 @@ export class AnimalListComponent {
 	{
 		breed : 'Sova',
 		name: 'sovulja',
-		birthDate: '1986'
+		birthDate: ''
 	},
 
 	{

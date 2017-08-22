@@ -4,8 +4,17 @@
 	<ng-container *ngFor="let animal of animals" >
 		<li >
 			<p>
-				Name: {{ animal.name }} {{ animal.birthDate}} {{ animal.breed }}
+				Name: {{ animal.name }}  
 			</p>
+
+			<p>
+				Rasa: {{ animal.breed }}
+			</p>
+
+			<p>
+			   Godiste: {{ animal.birthDate ? animal.birthDate : 'Nepoznat'}}
+			</p>
+
 		</li>
 <!--	<button (click)="remove(contact)">Remove</button> -->
 	</ng-container>
