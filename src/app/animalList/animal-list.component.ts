@@ -41,8 +41,8 @@ export class AnimalListComponent {
 	];
 	}
 
-	//remove(contact) {
-	//	const index = this.contacts.indexOf(contact);
-	//	this.contacts.splice(index , 1);
-	//}
+	remove(animal) {
+		const index = this.animals.indexOf(animal);
+		this.animals.splice(index , 1);
+	}
 }
