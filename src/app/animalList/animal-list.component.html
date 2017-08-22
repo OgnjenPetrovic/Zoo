@@ -1,0 +1,14 @@
+<h1>Animal list</h1>
+
+<ul >
+	<ng-container *ngFor="let animal of animals" >
+		<li >
+			<p>
+				Name: {{ animal.name }} {{ animal.birthDate}} {{ animal.breed }}
+			</p>
+		</li>
+<!--	<button (click)="remove(contact)">Remove</button> -->
+	</ng-container>
+
+</ul>
+
