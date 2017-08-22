@@ -3,32 +3,42 @@ import { Component } from '@angular/core';
 import { Animal } from './animal';
 
 @Component({
-	selector: 'app-animal-list',
-	templateUrl: './animal-list.component.html'
+  selector: 'app-animal-list',
+  templateUrl: './animal-list.component.html',
 })
+
 export class AnimalListComponent {
+  private animals : any[];
 
-	private animals: any[];
-	
-	constructor() {
-	   this.animals = [
-       new Animal('Elephant','Nelly','05.09.1999' ),
-       new Animal('Elephant','Wally','01.03.1989' ),
-       new Animal('Penguin','Pingu','08.03.2006' ),
-       new Animal('Panda','Polly','08.03.2006' ),
-       new Animal('Panda','Blush','' ),
-  	   new Animal('Zebra','Ziggy','22.04.2000' ),
-       new Animal('Bear','Smokey','16.10.2010' ),
-       new Animal('Monkey','Molly','14.11.2002' ),
-       new Animal('Monkey','Bush','' ),
-       new Animal('Bear','Smokey','16.10.2010' )
-	]
-	}
+  constructor() {
 
-	remove(animal) {
-		const index = this.animals.indexOf(animal);
-		this.animals.splice(index , 1);
-	}
+    this.animals = [
+      new Animal('Elephant','Nelly','05.09.1999' ),
+      new Animal('Elephant','Wally','01.03.1989' ),
+      new Animal('Penguin','Pingu','08.03.2006' ),
+      new Animal('Panda','Polly','08.03.2006' ),
+      new Animal('Panda','Blush','' ),
+      new Animal('Zebra','Ziggy','22.04.2000' ),
+      new Animal('Bear','Smokey','16.10.2010' ),
+      new Animal('Monkey','Molly','14.11.2002' ),
+      new Animal('Monkey','Bush','' ),
+      new Animal('Bear','Smokey','16.10.2010' )
+    ]
+  }
 
+  remove(animal){
+    const index = this.animals.indexOf(animal);
+    this.animals.splice(index, 1);
+  }
+
+  add(animal){
+    this.animals.push(animal);
+  }
+
+  moveToTop(animal){
+    const index = this.animals.indexOf(animal);
+    this.animals.splice(index, 1);
+    this.animals.splice(0,0,animal);
+  }
 
 }
